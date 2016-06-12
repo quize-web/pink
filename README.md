@@ -1,6 +1,6 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Илья Ильич](https://up.htmlacademy.ru/adaptive/7/user/3162).
+* Студент: [Илья](#).
 * Наставник: `Неизвестно`.
 
 ---
