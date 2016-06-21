@@ -2,90 +2,106 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PINK</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 
 
 <header class="page-header">
-  <div class="page-header__inner">
 
-    <div class="page-header__logo-wrap">
-      <a href="#" class="page-header__logo-link">
-        <img src="#" alt="pink - logo">
-      </a>
-    </div>
+    <section class="page-header__top">
+    <!--<section class="page-header__top page-header__top&#45;&#45;active">-->
+      <div class="page-header__inner">
+        <div class="page-header__top-left">
+          <div class="page-header__logo-wrap">
+            <!--<a href="#" class="page-header__logo-link">-->
+              <img src="img/xs/logo__pink.png" width="74" height="23" alt="pink - logo">
+            <!--</a>-->
+          </div>
+        </div>
 
-    <nav class="page-header__nav">
-      <a href="#" class="page-header__burger"></a>
-      <ul class="page-header__nav-list">
-        <li class="page-header__nav-item"><a href="#" class="page-header__nav-link">Информация</a></li>
-        <li class="page-header__nav-item"><a href="#" class="page-header__nav-link">Возможности</a></li>
-        <li class="page-header__nav-item"><a href="#" class="page-header__nav-link">Отзывы</a></li>
-        <li class="page-header__nav-item"><a href="#" class="page-header__nav-link">Стоимость</a></li>
-      </ul>
-    </nav>
+        <div class="page-header__top-right">
+            <nav class="page-header__nav">
+            <a href="#" class="page-header__burger"></a>
+            <ul class="page-header__nav-list">
+              <li class="page-header__nav-item"><a href="#" class="page-header__nav-link">Информация</a></li>
+              <li class="page-header__nav-item"><a href="#" class="page-header__nav-link">Возможности</a></li>
+              <li class="page-header__nav-item"><a href="#" class="page-header__nav-link">Отзывы</a></li>
+              <li class="page-header__nav-item"><a href="#" class="page-header__nav-link">Стоимость</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </section>
 
-  </div>
+    <section class="page-header__bottom">
+      <div class="app-platforms">
+          <div class="app-platforms__promo">
+              <div class="app-platforms__inner">
+                <h2 class="app-platforms__title">Взгляните на жизнь иначе!</h2>
+              </div>
+          </div>
+        <div class="app-platforms__download">
+          <div class="app-platforms__inner">
+            <a href="#" class="btn">Скачать приложение</a>
+            <div class="app-platforms__images-wrap">
+              <img class="app-platforms__platform-image" src="img/logo__apple.png" width="46" height="57" alt="apple">
+              <img class="app-platforms__platform-image" src="img/logo__android.svg" width="42" height="47" alt="android">
+              <img class="app-platforms__platform-image" src="img/logo__windows.svg" width="44" height="42" alt="windows">
+            </div>
+            <p class="app-platforms__desc">
+              Доступно для iPhone, iPad, Android, Windows phone, Mac OS, Windows 8
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 </header>
 
 
 
 <main>
 
-  <section class="app-platforms">
-    <div class="app-platforms__inner">
-      <h2 class="app-platforms__title">Взгляните на жизнь иначе!</h2>
-      <div class="app-platforms__bg-wrap">
-        <!--<img src="#" alt="#">-->
-      </div>
-      <div class="app-platforms__download">
-        <a href="#" class="app-platform__download-link">Скачать приложение</a>
-        <div class="app-platforms__images-wrap">
-          <img class="app-platforms__platform-image" src="#" alt="apple">
-          <img class="app-platforms__platform-image" src="#" alt="android">
-          <img class="app-platforms__platform-image" src="#" alt="windows">
-        </div>
-        <p class="app-platforms__desc">
-          Доступно для iPhone, iPad, Android, Windows phone, Mac OS, Windows 8
-        </p>
-      </div>
-    </div>
-  </section>
-
   <section class="app-features">
-    <div class="app-features__inner">
-      <h2 class="app-features__title">
-        Устали от серости мегаполиса?<br>
-        Нам есть, что вам предложить!
-      </h2>
+      <div class="app-features__header">
+        <div class="app-features__inner">
+          <h2 class="app-features__title">Устали от серости мегаполиса?</h2>
+          <h2 class="app-features__title">Нам есть, что вам предложить!</h2>
+        </div>
+      </div>
       <div class="app-features__features-wrap">
-        <div class="app-features__feature-item">
-          <div class="app-features__feature-image"><img src="#" alt="feature-01"></div>
-          <h3 class="app-features__feature-title">Поднимает настроение</h3>
-          <p class="app-features__feature-desc">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+        <div class="app-features__inner">
+          <div class="app-features__feature-item">
+            <div class="app-features__feature-image"><img src="#" alt="feature-01"></div>
+            <h3 class="app-features__feature-title">Поднимает настроение</h3>
+            <p class="app-features__feature-desc">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+          </div>
+          <div class="app-features__feature-item">
+            <div class="app-features__feature-image"><img src="#" alt="feature-02"></div>
+            <h3 class="app-features__feature-title">Меняет мир вокруг</h3>
+            <p class="app-features__feature-desc">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+          </div>
+          <div class="app-features__feature-item">
+            <div class="app-features__feature-image"><img src="#" alt="feature-03"></div>
+            <h3 class="app-features__feature-title">Заводит новых друзей</h3>
+            <p class="app-features__feature-desc">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+          </div>
+          <div class="app-features__features-logo"><img src="img/xs/iphone.png" alt="Hello everyone!"></div>
         </div>
-        <div class="app-features__feature-item">
-          <div class="app-features__feature-image"><img src="#" alt="feature-02"></div>
-          <h3 class="app-features__feature-title">Меняет мир вокруг</h3>
-          <p class="app-features__feature-desc">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-        </div>
-        <div class="app-features__feature-item">
-          <div class="app-features__feature-image"><img src="#" alt="feature-03"></div>
-          <h3 class="app-features__feature-title">Заводит новых друзей</h3>
-          <p class="app-features__feature-desc">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-        </div>
-        <div class="app-features__features-logo"><img src="#" alt="Hello everyone!"></div>
       </div>
       <div class="app-features__footer">
-        <div class="app-features__footer-feature">
-          <div class="app-features__footer-image"><img src="#" alt="feature-04"></div>
-          <h3 class="app-features__footer-title">Эффект на 24 часа!</h3>
-          <p class="app-features__footer-desc">
-            Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
-          </p>
-          <a class="app-features__footer-link">Узнать больше об исследовании</a>
+        <div class="app-features__inner">
+          <div class="app-features__footer-feature">
+            <div class="app-features__footer-image"><img src="#" alt="feature-04"></div>
+            <h3 class="app-features__footer-title">Эффект на 24 часа!</h3>
+            <p class="app-features__footer-desc">
+              Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
+            </p>
+            <a class="app-features__footer-link">Узнать больше об исследовании</a>
+          </div>
         </div>
       </div>
     </div>
@@ -94,38 +110,32 @@
   <section class="app-reviews">
     <div class="app-reviews__inner">
       <div class="app-reviews__reviews-wrap">
-        <article class="app-reviews__review-item">
+        <article class="app-reviews__review-item app-reviews__review-item--showed">
           <div class="app-reviews__review-author">
             <h1 class="app-reviews__author-name">Николай Петров</h1>
             <small class="app-reviews__author-desc">25 лет, водитель трамвая</small>
           </div>
-          <blockquote class="app-reviews__review-text">
-            Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
-          </blockquote>
+          <blockquote class="app-reviews__review-text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</blockquote>
         </article>
         <article class="app-reviews__review-item">
           <div class="app-reviews__review-author">
             <h1 class="app-reviews__author-name">...</h1>
             <small class="app-reviews__author-desc">...</small>
           </div>
-          <blockquote class="app-reviews__review-text">
-            ...
-          </blockquote>
+          <blockquote class="app-reviews__review-text">...</blockquote>
         </article>
         <article class="app-reviews__review-item">
           <div class="app-reviews__review-author">
             <h1 class="app-reviews__author-name">...</h1>
             <small class="app-reviews__author-desc">...</small>
           </div>
-          <blockquote class="app-reviews__review-text">
-            ...
-          </blockquote>
+          <blockquote class="app-reviews__review-text">...</blockquote>
         </article>
       </div>
-      <div class="app-reviews__pagination">
-        <i class="app-reviews__pagination-item app-reviews__pagination-item--active"></i>
-        <i class="app-reviews__pagination-item"></i>
-        <i class="app-reviews__pagination-item"></i>
+      <div class="slider-pagination">
+        <i class="slider-pagination__item slider-pagination__item--active"></i>
+        <i class="slider-pagination__item"></i>
+        <i class="slider-pagination__item"></i>
       </div>
     </div>
   </section>
@@ -134,45 +144,72 @@
     <div class="app-tariffs__inner">
       <table class="app-tariffs__table">
         <thead class="app-tariffs__table-header">
-          <tr class="app-tariffs__table-header-row">
-            <td class="app-tariffs__tariff-title app-tariffs__tariff-title--empty-cell"></td>
-            <th class="app-tariffs__tariff-title">
-              <h2 class="app-tariffs__tariff-name">База</h2>
-              <em class="app-tariffs__tariff-price">1,99 USD</em>
-            </th>
-            <th class="app-tariffs__tariff-title app-tariffs__tariff-title--hit">
-              <h2 class="app-tariffs__tariff-name">Стандарт</h2>
-              <em class="app-tariffs__tariff-price">3,99 USD</em>
-            </th>
-            <th class="app-tariffs__tariff-title">
-              <h2 class="app-tariffs__tariff-name">Анлим</h2>
-              <em class="app-tariffs__tariff-price">9,99 USD</em>
-            </th>
-          </tr>
+        <tr class="app-tariffs__table-header-row">
+          <td class="app-tariffs__tariff-title app-tariffs__tariff-title--empty-cell"></td>
+          <th class="app-tariffs__tariff-title">
+            <h2 class="app-tariffs__tariff-name">База</h2>
+            <em class="app-tariffs__tariff-price">1,99 USD</em>
+          </th>
+          <th class="app-tariffs__tariff-title app-tariffs__tariff-title--hit">
+            <h2 class="app-tariffs__tariff-name">Стандарт</h2>
+            <em class="app-tariffs__tariff-price">3,99 USD</em>
+          </th>
+          <th class="app-tariffs__tariff-title">
+            <h2 class="app-tariffs__tariff-name">Анлим</h2>
+            <em class="app-tariffs__tariff-price">9,99 USD</em>
+          </th>
+        </tr>
         </thead>
         <tr class="app-tariffs__table-row">
-          <th class="app-tariffs__table-cell app-tariffs__table-cell--title">Розовый фильтр</th>
-          <td class="app-tariffs__table-cell app-tariffs__table-cell--yes">Да</td>
-          <td class="app-tariffs__table-cell app-tariffs__table-cell--yes">Да</td>
-          <td class="app-tariffs__table-cell app-tariffs__table-cell--yes">Да</td>
+          <th class="app-tariffs__table-feature">Розовый фильтр</th>
+          <td class="app-tariffs__table-cell app-tariffs__table-cell--yes">
+            <span class="app-tariffs__table-cell-feature" data-feature="Розовый фильтр"></span>
+            <span class="app-tariffs__table-cell-include">Да</span>
+          </td>
+          <td class="app-tariffs__table-cell app-tariffs__table-cell--yes">
+            <span class="app-tariffs__table-cell-feature" data-feature="Розовый фильтр"></span>
+            <span class="app-tariffs__table-cell-include">Да</span>
+          </td>
+          <td class="app-tariffs__table-cell app-tariffs__table-cell--yes">
+            <span class="app-tariffs__table-cell-feature" data-feature="Розовый фильтр"></span>
+            <span class="app-tariffs__table-cell-include">Да</span>
+          </td>
         </tr>
         <tr class="app-tariffs__table-row">
-          <th class="app-tariffs__table-cell app-tariffs__table-cell--title">Смайлики</th>
-          <td class="app-tariffs__table-cell app-tariffs__table-cell--nope">Нет</td>
-          <td class="app-tariffs__table-cell app-tariffs__table-cell--nope">Нет</td>
-          <td class="app-tariffs__table-cell app-tariffs__table-cell--yes">Да</td>
+          <th class="app-tariffs__table-feature">Смайлики</th>
+          <td class="app-tariffs__table-cell app-tariffs__table-cell--nope">
+            <span class="app-tariffs__table-cell-feature" data-feature="Смайлики"></span>
+            <span class="app-tariffs__table-cell-include">Нет</span>
+          </td>
+          <td class="app-tariffs__table-cell app-tariffs__table-cell--nope">
+            <span class="app-tariffs__table-cell-feature" data-feature="Смайлики"></span>
+            <span class="app-tariffs__table-cell-include">Нет</span>
+          </td>
+          <td class="app-tariffs__table-cell app-tariffs__table-cell--yes">
+            <span class="app-tariffs__table-cell-feature" data-feature="Смайлики"></span>
+            <span class="app-tariffs__table-cell-include">Да</span>
+          </td>
         </tr>
         <tr class="app-tariffs__table-row">
-          <th class="app-tariffs__table-cell app-tariffs__table-cell--title">Комментарии</th>
-          <td class="app-tariffs__table-cell app-tariffs__table-cell--nope">Нет</td>
-          <td class="app-tariffs__table-cell app-tariffs__table-cell--nope">Нет</td>
-          <td class="app-tariffs__table-cell app-tariffs__table-cell--nope">Нет</td>
+          <th class="app-tariffs__table-feature">Комментарии</th>
+          <td class="app-tariffs__table-cell app-tariffs__table-cell--nope">
+            <span class="app-tariffs__table-cell-feature" data-feature="Комментарии"></span>
+            <span class="app-tariffs__table-cell-include">Нет</span>
+          </td>
+          <td class="app-tariffs__table-cell app-tariffs__table-cell--nope">
+            <span class="app-tariffs__table-cell-feature" data-feature="Комментарии"></span>
+            <span class="app-tariffs__table-cell-include">Нет</span>
+          </td>
+          <td class="app-tariffs__table-cell app-tariffs__table-cell--nope">
+            <span class="app-tariffs__table-cell-feature" data-feature="Комментарии"></span>
+            <span class="app-tariffs__table-cell-include">Нет</span>
+          </td>
         </tr>
       </table>
-      <div class="app-tariffs__pagination">
-        <i class="app-tariffs__pagination-item"></i>
-        <i class="app-tariffs__pagination-item app-tariffs__pagination-item--active"></i>
-        <i class="app-tariffs__pagination-item"></i>
+      <div class="slider-pagination">
+        <i class="slider-pagination__item"></i>
+        <i class="slider-pagination__item slider-pagination__item--active"></i>
+        <i class="slider-pagination__item"></i>
       </div>
     </div>
   </section>
@@ -182,36 +219,37 @@
 
 
   <footer class="page-footer">
-    <div class="page-footer__inner">
-
-      <article class="page-footer__contacts">
+    <article class="page-footer__contacts">
+      <div class="page-footer__inner">
         <h1 class="page-footer__contacts-title">
           Остались вопросы?<br>
           Свяжитесь с нами!
         </h1>
-        <div class="page-footer__contacts-item">
+        <div class="page-footer__contact-item">
           <div class="phone">
             <h2 class="phone__title">Звоните</h2>
             <a href="tel:88001000900" class="phone__link">8 (800) 1000 900</a>
           </div>
         </div>
-        <div class="page-footer__contacts-item">
+        <div class="page-footer__contact-item">
           <div class="email">
             <h2 class="email__title">Пишите:</h2>
-            <a href="mailto:hello@pinkapp.ru" class="email__link">hello@pinkapp.ruu</a>
+            <a href="mailto:hello@pinkapp.ru" class="email__link">hello@pinkapp.ru</a>
           </div>
         </div>
-        <div class="page-footer__contacts-item">
+        <div class="page-footer__contact-item">
           <div class="address">
             <h2 class="address__title">Приезжайте в гости</h2>
             <p class="address__text">Санкт-Петербург, Невский проспект, д. 20</p>
           </div>
         </div>
-      </article>
+      </div>
+    </article>
 
-      <section class="page-footer__map"></section>
+    <section class="page-footer__map"></section>
 
-      <section class="page-footer__sub-footer">
+    <section class="page-footer__sub-footer">
+      <div class="page-footer__inner">
         <div class="page-footer__logo-wrap"><img src="#" alt="pink - footer logo"></div>
         <div class="page-footer__social">
           <ul class="social-links">
@@ -223,9 +261,8 @@
         <div class="page-footer__copyright">
           Website by <a href="#"><img src="#" alt="My web-studio"></a> for <a href="#"><img src="#" alt="HTML Academy"></a>
         </div>
-      </section>
-
-    </div>
+      </div>
+    </section>
   </footer>
 
 

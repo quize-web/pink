@@ -1,0 +1,39 @@
+.app-platforms {
+  color: $text-color--light;
+
+  &__inner {
+    @include inner;
+  }
+
+  &__promo {
+    min-height: 350px;
+    padding: 20px 0;
+    background-color: transparent;
+  }
+
+  &__title {
+    display: block;
+    font: $font__h1;
+    margin: 0;
+    text-align: center;
+  }
+
+  &__download {
+    padding: 30px 0;
+    background-color: $color__blue--darker;
+  }
+
+  &__images-wrap {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+
+  &__desc {
+    @include reformat__text-block;
+
+    text-align: center;
+  }
+}

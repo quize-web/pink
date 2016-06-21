@@ -1,0 +1,57 @@
+//////////////////////////////
+//  COLORS
+//////////////////////////////
+
+$color__pink: #d22856; // some h1
+$color__green: #3dc644; // check mark
+$color__orange: #f25b26; // cross mark
+$color__white: #ffffff; // white
+$color__gray: #f2f2f2; // some bg
+$color__gray--darker: #e5e5e5; // table
+$color__blue: #283645; // some bg
+$color__blue--darker: #1d2631; // some bg
+$color__black: #000000; // some h2
+
+$text-color--light: $color__white;
+$text-color--dark: $color__blue;
+$text-color--black: $color__black;
+
+//////////////////////////////
+//  FONT SETTINGS
+//////////////////////////////
+
+$font-size: 14px;
+$font-size__h1: 24px;
+$font-size__h2: 18px;
+
+$line-height: 24px;
+$line-height--big: 30px;
+$line-height__h1: 30px;
+$line-height__h2: 24px;
+
+$font-weight: 400;
+$font-weight--light: 300;
+$font-weight--bold: 700;
+
+$font-weight: $font-weight;
+$font-weight__h1: $font-weight--light;
+$font-weight__h2: $font-weight--bold;
+
+$font-family: "Open Sans", Arial, sans-serif;
+$font: $font-weight #{$font-size}/#{$line-height} $font-family;
+$font__h1: $font-weight--light #{$font-size__h1}/#{$line-height__h1} $font-family;
+$font__h2: $font-weight--bold #{$font-size__h2}/#{$line-height__h2} $font-family;
+
+//////////////////////////////
+//  SIZES
+//////////////////////////////
+
+$viewport-width--xs: 320px;
+$inner-padding--xs: 40px;
+$content-width--xs: $viewport-width--xs - $inner-padding--xs;
+
+//////////////////////////////
+//  PATHS
+//////////////////////////////
+
+$path__img: "../img/";

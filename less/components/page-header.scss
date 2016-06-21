@@ -1,0 +1,149 @@
+.page-header {
+  min-height: 65px;
+  background: $color__blue--darker url("#{$path__img}/xs/bg__page-header.jpg") no-repeat;
+  color: $text-color--light;
+
+  &__top {
+    background-color: rgba(0,0,0,0.3);
+    position: relative;
+  }
+
+  &__top--active {
+    box-shadow: inset 0 -1px 0 $color__black;
+    //border-bottom: 1px solid $color__black;
+    background-color: $color__blue;
+  }
+
+  &__inner {
+    @include inner;
+  }
+
+  &__top-left {
+    float: left;
+  }
+  &__top-right {
+    float: right;
+  }
+
+  &__logo-wrap {
+    width: 74px;
+    height: 23px;
+    padding: 21px 0;
+
+    img {
+      width: 74px;
+      height: 23px;
+    }
+  }
+
+  &__burger {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 4px;
+    padding: 10px 0;
+    background-color: $color__white;
+    cursor: pointer;
+    background-clip: content-box;
+    margin: 20.5px 0;
+    transition: .3s;
+
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 50px;
+      height: 4px;
+      background-color: $color__white;
+      left: 0;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+
+    @extend %burger // активное состояние
+  }
+
+  &__top {
+       &--active %burger { // активное состояние
+         background-color: transparent;
+         width: 30px;
+
+         &::before, &::after {
+           right: 0;
+           width: 30px;
+           height: 3px;
+           transform-origin: 100% center;
+         }
+         &::before {
+           transform: rotate(-45deg);
+         }
+         &::after {
+           transform: rotate(45deg);
+         }
+       }
+     }
+
+/*  &__burger {
+    display: block;
+    width: 50px;
+    height: 25px;
+    padding: 20px 0;
+    background: url("#{$path__img}/xs/icon__burger.png") no-repeat center;
+
+    @extend %burger; // активное состояние
+  }*/
+
+/*  &__top {
+    &--active %burger { // активное состояние
+      width: 23px;
+      height: 22px;
+      padding: 21px 0;
+      background: url("../../img/xs/icon__cross.png") no-repeat center;
+    }
+  }*/
+
+  &__nav-list {
+    @include reformat__list;
+    @include under-bottom(full);
+
+    display: none;
+    text-align: center;
+
+    @extend %nav-list; // активное состояние
+  }
+
+  &__top {
+    &--active %nav-list { // активное состояние
+      display: block;
+    }
+  }
+
+  &__nav-item {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid $color__black;
+    background-color: $color__blue;
+  }
+
+  &__nav-link {
+    @include reformat__link($color__white);
+
+    font-size: 18px;
+    font-weight: $font-weight--bold;
+    line-height: 32px;
+    display: block;
+    padding: 15px 0;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $color__pink;
+    }
+
+    &:active {
+      color: rgba($color__pink, .3);
+    }
+  }
+}

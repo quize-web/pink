@@ -1,0 +1,46 @@
+.app-reviews {
+  text-align: center;
+  line-height: $line-height--big;
+  padding: 45px 0 40px;
+  color: $text-color--dark;
+
+  &__inner {
+    @include inner;
+  }
+
+  &__review-item {
+    margin-bottom: 30px;
+    display: none;
+
+    &--showed {
+      display: block;
+    }
+  }
+
+  &__author-name {
+    @include reformat__text-block;
+
+    font-weight: $font-weight--bold;
+    font-size: $font-size__h2;
+    line-height: $line-height--big;
+    color: $text-color--black;
+    margin-bottom: 10px;
+  }
+
+  &__author-desc {
+    display: none;
+  }
+
+  &__review-text {
+    @include reformat__text-block;
+    line-height: $line-height--big;
+
+    quotes: "\00ab" "\00bb";
+    &::before {
+      content: open-quote;
+    }
+    &::after {
+      content: close-quote;
+    }
+  }
+}
