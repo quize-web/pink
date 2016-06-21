@@ -1,0 +1,60 @@
+.app-features {
+  background-color: $color__white;
+  color: $text-color--dark;
+
+  &__inner {
+    @include inner;
+  }
+
+  &__header {
+    padding-top: 45px;
+  }
+
+  &__title {
+    @include reformat__text-block;
+
+    text-align: center;
+    font: $font__h1;
+    margin-bottom: 30px;
+  }
+
+  &__feature-image {
+    display: none;
+  }
+
+  &__features-wrap {
+    @include top-gradient(33px);
+
+    background-color: $color__gray;
+    text-align: center;
+    padding-top: 50px + 33px;
+  }
+
+  &__feature-item {
+    margin-bottom: 30px;
+  }
+
+  &__feature-title {
+    @include reformat__text-block;
+
+    font: $font__h2;
+    margin-bottom: 10px;
+    color: $text-color--black;
+  }
+
+  &__feature-desc {
+    @include reformat__text-block;
+  }
+
+  &__features-logo {
+    height: 275px;
+    padding-top: 10px;
+    overflow: hidden;
+    text-align: center;
+    //background: url("../../img/xs/iphone.png") no-repeat center 10px;
+  }
+  
+  &__footer {
+    display: none;
+  }
+}

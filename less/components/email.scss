@@ -1,0 +1,15 @@
+.email {
+  &__title {
+    @include reformat__text-block;
+
+    font: $font__h2;
+    margin-bottom: 2px;
+  }
+
+  &__link {
+    @include reformat__text-block;
+
+    font: $font__h1;
+    color: $color__pink;
+  }
+}
