@@ -8,6 +8,16 @@
 
   &__header {
     padding-top: 45px;
+
+    @include tablet {
+      padding-top: 55px;
+      padding-bottom: 40px;
+    }
+
+    @include desktop {
+      padding-top: 75px;
+      padding-bottom: 65px;
+    }
   }
 
   &__title {
@@ -16,10 +26,23 @@
     text-align: center;
     font: $font__h1;
     margin-bottom: 30px;
+
+    @include tablet {
+      font: $font__h1--big;
+      margin-bottom: 0;
+    }
+
+    @include desktop {
+      font: $font__h1--huge;
+    }
   }
 
   &__feature-image {
     display: none;
+
+    @include desktop {
+      display: block;
+    }
   }
 
   &__features-wrap {
@@ -28,10 +51,67 @@
     background-color: $color__gray;
     text-align: center;
     padding-top: 50px + 33px;
+
+    @include tablet {
+      @include top-gradient(53px);
+      $app-features__features-wrap__padding--md: 25px + 53px !global;
+      padding-top: $app-features__features-wrap__padding--md;
+      padding-left: 310px;
+      text-align: left;
+      //overflow: hidden;
+      padding-bottom: 5px;
+
+      .app-features__inner {
+        width: 310px;
+        position: relative;
+      }
+    }
+
+    @include desktop {
+      padding: 0;
+      @include top-gradient(91px);
+      $app-features__features-wrap__padding--lg: 0px + 91px !global;
+      //padding-top: $app-features__features-wrap__padding--lg;
+      padding-top: 0;
+      text-align: center;
+      overflow: visible;
+
+      .app-features__inner {
+        width: $content-width--lg;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        top: -3px;
+      }
+    }
   }
 
   &__feature-item {
     margin-bottom: 30px;
+
+    @include tablet {
+      margin-bottom: 35px;
+    }
+
+    @include desktop {
+      line-height: $line-height--big;
+      width: 300px;
+      flex-shrink: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &__feature-image {
+    @include desktop {
+      margin-bottom: 60px;
+
+      img {
+        display: block;
+        width: auto;
+        margin: 0 auto;
+      }
+    }
   }
 
   &__feature-title {
@@ -40,10 +120,22 @@
     font: $font__h2;
     margin-bottom: 10px;
     color: $text-color--black;
+
+    @include desktop {
+      font-size: $font-size__h2--big;
+      line-height: $font-size__h2--big;
+      padding: 0 30px;
+      margin-bottom: 25px;
+    }
   }
 
   &__feature-desc {
     @include reformat__text-block;
+
+    @include desktop {
+      font-size: $font-size--big;
+      padding: 0 30px;
+    }
   }
 
   &__features-logo {
@@ -51,10 +143,106 @@
     padding-top: 10px;
     overflow: hidden;
     text-align: center;
-    //background: url("../../img/xs/iphone.png") no-repeat center 10px;
+    //background: url("#{$path__img}/xs/screen-1-3.png") no-repeat center bottom;
+
+    img {
+      width: 157px;
+      height: auto;
+    }
+
+    @include tablet {
+      width: (($viewport-width--md - $inner-padding--md) / 2) - ($inner-padding--md / 2);
+      position: absolute;
+      text-align: left;
+      left: 0;
+      //top: -#{$app-features__features-wrap__padding--md};
+      bottom: -5px;
+      height: 481px;
+      transform: translateX(-100%);
+      padding-top: 0;
+
+      img {
+        width: 268px;
+        height: 481px;
+      }
+    }
+
+    @include desktop {
+      display: none;
+    }
   }
   
   &__footer {
     display: none;
+
+    @include tablet {
+      display: block;
+      padding-top: 55px;
+    }
+
+    @include desktop {
+      padding-top: 60px;
+      padding-bottom: 65px;
+      background-color: $color__gray;
+    }
   }
+
+  &__footer-feature {
+    padding-left: 310px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    background: no-repeat left top / contain;
+
+    @include desktop {
+      padding-top: 100px;
+      padding-bottom: 45px;
+      padding-left: 365px;
+    }
+    
+    &--timer {
+      background-image: url("#{$path__img}/icon__timer.svg");
+    }
+  }
+
+  &__footer-title {
+    @include reformat__text-block();
+
+    font: $font__h2--big;
+    margin-bottom: 5px;
+
+    @include tablet {
+      width: 170px;
+    }
+
+    @include desktop {
+      width: auto;
+      line-height: $font-size__h2--big;
+      margin-bottom: 22px;
+    }
+  }
+
+  &__footer-desc {
+    @include reformat__text-block();
+
+    margin-bottom: 10px;
+
+    @include desktop {
+      font: $font--big;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__footer-link {
+    @include reformat__text-block();
+
+    display: inline-block;
+    color: $color__pink;
+    text-decoration: underline;
+    cursor: pointer;
+
+    @include desktop {
+      font: $font--big;
+    }
+  }
+
 }

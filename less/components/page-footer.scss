@@ -3,12 +3,36 @@
   text-align: center;
   color: $text-color--dark;
 
+  @include tablet {
+    padding-top: 50px;
+  }
+
+  @include desktop {
+    padding-top: 75px;
+  }
+
   &__inner {
     @include inner;
   }
 
   &__contacts {
     padding-bottom: 15px;
+
+    @include tablet {
+      padding-bottom: 20px;
+    }
+
+    @include desktop {
+      padding-bottom: 0;
+    }
+
+    .page-footer__inner {
+      @include tablet {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+    }
   }
 
   &__contacts-title {
@@ -16,16 +40,55 @@
 
     font: $font__h1;
     margin-bottom: 30px;
+
+    @include tablet {
+      font: $font__h1--big;
+      margin-bottom: 40px;
+      flex-grow: 1;
+      width: 100%;
+    }
+
+    @include desktop {
+      font: $font__h1--huge;
+      margin-bottom: 55px;
+    }
   }
 
   &__contact-item {
     margin-bottom: 20px;
+
+    @include tablet {
+      margin-bottom: 0;
+      width: 300px;
+      flex-grow: 1;
+
+      &:nth-of-type(2n) {
+        margin-right: 0;
+        margin-bottom: 45px;
+      }
+
+      & > * {
+        width: 300px;
+        margin: 0 auto;
+      }
+    }
+
+    @include desktop {
+      &:nth-of-type(2n) {
+        margin-bottom: 0;
+        order: 1;
+      }
+    }
 
     h2 {
       @include reformat__text-block;
 
       font: $font__h2;
       margin-bottom: 2px;
+
+      @include desktop {
+        margin-bottom: 25px;
+      }
     }
 
     h2 + * {
@@ -33,6 +96,11 @@
 
       font: $font__h1;
       color: $color__pink;
+    }
+
+    a:hover {
+      color: $text-color--dark;
+      text-decoration: underline;
     }
   }
 
@@ -46,14 +114,122 @@
             linear-gradient(to bottom right,
                     $color__white 50%,
                     transparent 50%),
-            url("../../img/xs/map.png");
+            url("#{$path__img}/xs/map.png");
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-position: top left, top right, bottom center;
-    background-size: 50% 35px, 50% 35px, cover;
+    background-size: 50.1% 35px, 50% 35px, cover;
     background-color: $color__gray;
+
+    @include tablet {
+      height: 305px;
+      background-size: 50.1% 72px, 50% 72px, auto;
+      padding-top: 0 + 72px;
+      background-image:
+            linear-gradient(to bottom left,
+                    $color__white 50%,
+                    transparent 50%),
+            linear-gradient(to bottom right,
+                    $color__white 50%,
+                    transparent 50%),
+            url("#{$path__img}/md/map--full.png");
+    }
+
+    @include desktop {
+      height: 400px;
+      padding-top: 0 + 123px;
+      background-size: 50.1% 123px, 50% 123px, auto;
+      background-image:
+              linear-gradient(to bottom left,
+                      $color__white 50%,
+                      transparent 50%),
+              linear-gradient(to bottom right,
+                      $color__white 50%,
+                      transparent 50%),
+              url("#{$path__img}/lg/map.png");
+    }
+
+    @include desktop--big {
+      background-image:
+              linear-gradient(to bottom left,
+                      $color__white 50%,
+                      transparent 50%),
+              linear-gradient(to bottom right,
+                      $color__white 50%,
+                      transparent 50%),
+              url("#{$path__img}/lg/map--big.png");
+    }
+
+    // ОТ СЕБЯ
+    @media (min-width: 2560px) {
+      height: 855px;
+      padding-top: 0 + 262x;
+      background-size: 50.1% 262px, 50% 262px, auto;
+      background-image:
+              linear-gradient(to bottom left,
+                      $color__white 50%,
+                      transparent 50%),
+              linear-gradient(to bottom right,
+                      $color__white 50%,
+                      transparent 50%),
+              url("#{$path__img}/lg/map--full.png");
+    }
   }
 
   &__sub-footer {
     display: none;
+
+    min-height: 130px;
+    align-items: center;
+
+    @include tablet {
+      display: flex;
+    }
+
+    .page-footer__inner {
+      display: flex;
+      justify-content: space-between;
+    }
   }
+
+  &__logo-wrap {
+    width: 145px;
+    height: 40px;
+    flex-shrink: 0;
+
+    img {
+      position: relative;
+      top: -4px;
+    }
+  }
+
+  &__social {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__copyright {
+    width:  220px;
+    text-align: right;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    line-height: $line-height--low;
+
+    a {
+      img {
+        display: inline-block;
+        margin: 0 10px;
+        width: auto;
+      }
+
+      &:last-of-type {
+        img {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
 }

@@ -6,12 +6,19 @@ html, body {
 body  {
   font: $font;
   width: 100%;
-  max-width: $viewport-width--xs;
+  min-width: $viewport-width--xs;
   color: $text-color--dark;
+
+  @include tablet {
+    min-width: $viewport-width--md;
+  }
+
+  @include desktop {
+    min-width: $viewport-width--lg;
+  }
 }
 
-/*
 img {
   width: 100%;
   height: auto;
-}*/
+}

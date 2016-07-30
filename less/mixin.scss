@@ -1,7 +1,60 @@
-.clearfix::after {
-  display: table;
-  clear: both;
-  content: "";
+@mixin tablet {
+  @media (min-width: $breakpoint__tablet) {
+    @content
+  }
+}
+
+@mixin desktop {
+  @media (min-width: ($breakpoint__desktop)) {
+    @content
+  }
+}
+
+@mixin desktop--big {
+  @media (min-width: $breakpoint__desktop--big) {
+    @content
+  }
+}
+
+@mixin retina($x: 2) {
+  @media (min-resolution: #{$x}dppx) {
+    @content
+  }
+}
+
+@mixin inner {
+  width: $content-width--xs;
+  padding: 0 ($inner-padding--xs / 2);
+  margin: 0 auto;
+
+  @include tablet {
+    width: $content-width--md;
+    padding: 0 ($inner-padding--md / 2);
+  }
+
+  @include desktop {
+    width: $content-width--lg;
+    padding: 0 ($inner-padding--lg / 2);
+  }
+
+  &::after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+}
+
+@mixin inner--custom($width, $padding-left, $padding-right) {
+  width: $width;
+  padding-left: $padding-left;
+  padding-right: $padding-right;
+  margin: 0 auto;
+
+  &::after {
+    display: table;
+    clear: both;
+    content: "";
+  }
 }
 
 @mixin reset__indents {
@@ -12,18 +65,6 @@
 @mixin reset__font-size {
   font-size: 0;
   line-height: 0;
-}
-
-@mixin inner {
-  width: $content-width--xs;
-  padding: 0 ($inner-padding--xs / 2);
-  margin: 0 auto;
-
-  &::after {
-    display: table;
-    clear: both;
-    content: "";
-  }
 }
 
 @mixin reformat__text-block($display: block) {
@@ -60,7 +101,7 @@
 @mixin reformat__button($display: inline-block) {
   @include reset__indents;
   display: $display;
-  vertical-align: top;
+  vertical-align:  top;
   font: $font;
   outline: none;
   border: none;
@@ -109,4 +150,10 @@
   @if ($position == full) {
     right: 0;
   }
+}
+
+.clearfix::after {
+  display: table;
+  clear: both;
+  content: "";
 }
