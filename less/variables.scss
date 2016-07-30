@@ -21,13 +21,24 @@ $text-color--black: $color__black;
 //////////////////////////////
 
 $font-size: 14px;
+$font-size--big: 18px;
 $font-size__h1: 24px;
+$font-size__h1--low: 18px;
+$font-size__h1--big: 40px;
+$font-size__h1--huge: 50px;
+$font-size__h2--low: 16px;
 $font-size__h2: 18px;
+$font-size__h2--big: 30px;
 
 $line-height: 24px;
+$line-height--low: 18px;
 $line-height--big: 30px;
 $line-height__h1: 30px;
+$line-height__h1--low: 24px;
+$line-height__h1--big: 48px;
+$line-height__h1--huge: 56px;
 $line-height__h2: 24px;
+$line-height__h2--big: 36px;
 
 $font-weight: 400;
 $font-weight--light: 300;
@@ -39,8 +50,13 @@ $font-weight__h2: $font-weight--bold;
 
 $font-family: "Open Sans", Arial, sans-serif;
 $font: $font-weight #{$font-size}/#{$line-height} $font-family;
+$font--big: $font-weight #{$font-size--big}/#{$line-height--big} $font-family;
 $font__h1: $font-weight--light #{$font-size__h1}/#{$line-height__h1} $font-family;
+$font__h1--low: $font-weight--light #{$font-size__h1--low}/#{$line-height__h1--low} $font-family;
+$font__h1--big: $font-weight--light #{$font-size__h1--big}/#{$line-height__h1--big} $font-family;
+$font__h1--huge: $font-weight--light #{$font-size__h1--huge}/#{$line-height__h1--huge} $font-family;
 $font__h2: $font-weight--bold #{$font-size__h2}/#{$line-height__h2} $font-family;
+$font__h2--big: $font-weight--bold #{$font-size__h2--big}/#{$line-height__h2--big} $font-family;
 
 //////////////////////////////
 //  SIZES
@@ -49,6 +65,19 @@ $font__h2: $font-weight--bold #{$font-size__h2}/#{$line-height__h2} $font-family
 $viewport-width--xs: 320px;
 $inner-padding--xs: 40px;
 $content-width--xs: $viewport-width--xs - $inner-padding--xs;
+
+$viewport-width--md: 700px;
+$inner-padding--md: 80px;
+$content-width--md: $viewport-width--md - $inner-padding--md;
+
+$viewport-width--lg: 1200px;
+$inner-padding--lg: 260px;
+$content-width--lg: $viewport-width--lg - $inner-padding--lg;
+
+$breakpoint__mobile: 320px;
+$breakpoint__tablet: 700px;
+$breakpoint__desktop : 1200px;
+$breakpoint__desktop--big: 1440px;
 
 //////////////////////////////
 //  PATHS

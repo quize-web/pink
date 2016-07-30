@@ -18,7 +18,15 @@
         <div class="page-header__top-left">
           <div class="page-header__logo-wrap">
             <!--<a href="#" class="page-header__logo-link">-->
-              <img src="img/xs/logo__pink.png" width="74" height="23" alt="pink - logo">
+              <picture>
+                <source media="(min-width: 1200px)" srcset=
+                    "img/lg/logo__pink.png 1x,
+                    img/lg/logo__pink--2x.png 2x">
+                <source media="(min-width: 700px)" srcset=
+                    "img/md/logo__pink.png 1x,
+                    img/md/logo__pink--2x.png 2x">
+                <img src="img/xs/logo__pink.png" alt="pink - logo">
+              </picture>
             <!--</a>-->
           </div>
         </div>
@@ -48,7 +56,7 @@
           <div class="app-platforms__inner">
             <a href="#" class="btn">Скачать приложение</a>
             <div class="app-platforms__images-wrap">
-              <img class="app-platforms__platform-image" src="img/logo__apple.png" width="46" height="57" alt="apple">
+              <img class="app-platforms__platform-image" src="img/logo__apple.svg" width="46" height="57" alt="apple">
               <img class="app-platforms__platform-image" src="img/logo__android.svg" width="42" height="47" alt="android">
               <img class="app-platforms__platform-image" src="img/logo__windows.svg" width="44" height="42" alt="windows">
             </div>
@@ -69,33 +77,39 @@
       <div class="app-features__header">
         <div class="app-features__inner">
           <h2 class="app-features__title">Устали от серости мегаполиса?</h2>
-          <h2 class="app-features__title">Нам есть, что вам предложить!</h2>
+          <h2 class="app-features__title">Нам есть, что вам<br>предложить!</h2>
         </div>
       </div>
       <div class="app-features__features-wrap">
         <div class="app-features__inner">
           <div class="app-features__feature-item">
-            <div class="app-features__feature-image"><img src="#" alt="feature-01"></div>
+            <div class="app-features__feature-image"><img src="img/lg/iphone-01.png" srcset="img/lg/iphone-01--2x.png 2x" alt="iphone-screen-01"></div>
             <h3 class="app-features__feature-title">Поднимает настроение</h3>
             <p class="app-features__feature-desc">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
           </div>
           <div class="app-features__feature-item">
-            <div class="app-features__feature-image"><img src="#" alt="feature-02"></div>
+            <div class="app-features__feature-image"><img src="img/lg/iphone-02.png" srcset="img/lg/iphone-02--2x.png 2x" alt="iphone-screen-02"></div>
             <h3 class="app-features__feature-title">Меняет мир вокруг</h3>
             <p class="app-features__feature-desc">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
           </div>
           <div class="app-features__feature-item">
-            <div class="app-features__feature-image"><img src="#" alt="feature-03"></div>
+            <div class="app-features__feature-image"><img src="img/lg/iphone-03.png" srcset="img/lg/iphone-03--2x.png 2x" alt="iphone-screen-03"></div>
             <h3 class="app-features__feature-title">Заводит новых друзей</h3>
             <p class="app-features__feature-desc">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
           </div>
-          <div class="app-features__features-logo"><img src="img/xs/iphone.png" alt="Hello everyone!"></div>
+          <div class="app-features__features-logo">
+            <picture>
+              <source media="(min-width: 700px)" srcset=
+                  "img/md/iphone.png 1x,
+                    img/md/iphone--2x.png 2x">
+              <img src="img/xs/iphone.png" alt="Hello everyone!">
+            </picture>
+            </div>
         </div>
       </div>
       <div class="app-features__footer">
         <div class="app-features__inner">
-          <div class="app-features__footer-feature">
-            <div class="app-features__footer-image"><img src="#" alt="feature-04"></div>
+          <div class="app-features__footer-feature app-features__footer-feature--timer">
             <h3 class="app-features__footer-title">Эффект на 24 часа!</h3>
             <p class="app-features__footer-desc">
               Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
@@ -131,6 +145,12 @@
           </div>
           <blockquote class="app-reviews__review-text">...</blockquote>
         </article>
+        <!-- ARROW PAGINATION -->
+        <div class="slider-arrow-pagination">
+          <div class="slider-arrow-pagination__prev"></div>
+          <div class="slider-arrow-pagination__next"></div>
+        </div>
+        <!-- /////////////// -->
       </div>
       <div class="slider-pagination">
         <i class="slider-pagination__item slider-pagination__item--active"></i>
@@ -240,7 +260,7 @@
         <div class="page-footer__contact-item">
           <div class="address">
             <h2 class="address__title">Приезжайте в гости</h2>
-            <p class="address__text">Санкт-Петербург, Невский проспект, д. 20</p>
+            <p class="address__text">Санкт-Петербург,<br>Невский проспект, д. 20</p>
           </div>
         </div>
       </div>
@@ -250,16 +270,23 @@
 
     <section class="page-footer__sub-footer">
       <div class="page-footer__inner">
-        <div class="page-footer__logo-wrap"><img src="#" alt="pink - footer logo"></div>
+        <div class="page-footer__logo-wrap">
+          <picture>
+            <source media="(min-width: 1200px)" srcset=
+                "img/lg/logo__pink-footer.png 1x,
+                    img/lg/logo__pink-footer--2x.png 2x">
+            <img src="img/md/logo__pink-footer.png" width="145" height="40" srcset="img/md/logo__pink-footer--2x.png 2x" alt="pink - footer logo">
+          </picture>
+        </div>
         <div class="page-footer__social">
           <ul class="social-links">
-            <li class="social-links__item"><a href="#" class="social-links__item-link">Twitter</a></li>
-            <li class="social-links__item"><a href="#" class="social-links__item-link">Facebook</a></li>
-            <li class="social-links__item"><a href="#" class="social-links__item-link">YouTube</a></li>
+            <li class="social-links__item social-links__item--twitter"><a href="#" class="social-links__item-link">Twitter</a></li>
+            <li class="social-links__item social-links__item--facebook"><a href="#" class="social-links__item-link">Facebook</a></li>
+            <li class="social-links__item social-links__item--youtube"><a href="#" class="social-links__item-link">YouTube</a></li>
           </ul>
         </div>
         <div class="page-footer__copyright">
-          Website by <a href="#"><img src="#" alt="My web-studio"></a> for <a href="#"><img src="#" alt="HTML Academy"></a>
+          Website by <a href="#"><img src="img/logo__a.svg" width="27" height="30" alt="My web-studio"></a> for <a href="#"><img src="img/logo__htmlacademy.svg" width="27" height="33" alt="HTML Academy"></a>
         </div>
       </div>
     </section>
@@ -267,5 +294,6 @@
 
 
 
+<script src="js/scripts.js"></script>
 </body>
 </html>

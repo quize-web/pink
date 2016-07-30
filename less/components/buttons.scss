@@ -1,6 +1,9 @@
 .btn {
-  @include reformat__button(block);
+  @include reformat__button(inline-block);
 
+  width: 280px;
+  box-sizing: border-box;
+  max-width: 100%;
   font-size: $font-size__h2;
   font-weight: $font-weight--bold;
   line-height: $font-size__h2;
@@ -9,6 +12,15 @@
   border: 3px solid $color__white;
   border-radius: 25px;
   margin-bottom: 30px;
+
+  @include tablet {
+    margin-bottom: 45px;
+  }
+
+  @include desktop {
+    width: 300px;
+    margin-bottom: 65px;
+  }
   
   &:hover {
     background-color: $color__white;
