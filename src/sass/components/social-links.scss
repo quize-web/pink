@@ -1,0 +1,45 @@
+.social-links {
+  @include reformat__list;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  &__item {
+    font-size: 0;
+
+    display: block;
+
+    margin: 0 5px;
+
+    border: 3px solid rgba($color__blue, 0.1);
+    border-radius: 50%;
+    background: #fefefe no-repeat center;
+
+    &--twitter {
+      background-image: url("#{$path__img}/icon__twitter.svg");
+    }
+    &--facebook {
+      background-image: url("#{$path__img}/icon__facebook.svg");
+    }
+    &--youtube {
+      background-image: url("#{$path__img}/icon__youtube.svg");
+    }
+
+    &:hover {
+      border-color: $color__blue;
+    }
+
+    &:active {
+      opacity: 0.1;
+      border-color: $color__blue;
+    }
+  }
+
+  &__item-link {
+    display: block;
+
+    width: 45px;
+    height: 45px;
+  }
+}

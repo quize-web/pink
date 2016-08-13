@@ -1,0 +1,26 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @include tablet {
+    min-width: $viewport-width--md;
+  }
+  @include desktop {
+    min-width: $viewport-width--lg;
+  }
+
+  font: $font;
+
+  width: 100%;
+  min-width: $viewport-width--xs;
+
+  color: $text-color--dark;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}

@@ -1,0 +1,25 @@
+.phone {
+  &__title {
+    @include reformat__text-block;
+
+    font: $font__h2;
+
+    margin-bottom: 2px;
+  }
+
+  &__link {
+    @include reformat__text-block;
+
+    font: $font__h1;
+
+    cursor: pointer;
+
+    color: $color__pink;
+
+    &:hover {
+      text-decoration: underline;
+
+      color: $text-color--dark;
+    }
+  }
+}

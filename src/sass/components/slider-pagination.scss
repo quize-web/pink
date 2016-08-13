@@ -1,0 +1,30 @@
+.slider-pagination {
+  @include reset__font-size;
+
+  min-height: 6px;
+  padding: 3px 0;
+
+  text-align: center;
+
+  &__item {
+    @include reformat__input;
+
+    display: inline-block;
+
+    width: 6px;
+    height: 6px;
+    margin: 0 10px;
+
+    cursor: pointer;
+
+    border-radius: 50%;
+    background-color: $color__blue;
+
+    &--active {
+      cursor: default;
+
+      background-color: $color__white;
+      box-shadow: 0 0 0 3px $color__blue;
+    }
+  }
+}

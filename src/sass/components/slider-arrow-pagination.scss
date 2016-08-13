@@ -1,0 +1,32 @@
+.slider-arrow-pagination {
+  &__prev,
+  &__next {
+    position: absolute;
+    top: 50%;
+
+    box-sizing: border-box;
+    width: 29px;
+    height: 29px;
+
+    cursor: pointer;
+
+    border: 2px solid rgba($color__blue, 0.3);
+    border-top: none;
+  }
+
+  &__prev {
+    left: 0;
+
+    transform: translateY(-50%) rotate(45deg);
+
+    border-right: none;
+  }
+
+  &__next {
+    right: 0;
+
+    transform: translateY(-50%) rotate(-45deg);
+
+    border-left: none;
+  }
+}

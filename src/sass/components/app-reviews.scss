@@ -1,0 +1,120 @@
+.app-reviews {
+  @include tablet {
+    padding: 75px 0 20px;
+  }
+  @include desktop {
+    padding: 70px 0 35px;
+  }
+
+  line-height: $line-height--big;
+
+  padding: 45px 0 40px;
+
+  text-align: center;
+
+  color: $text-color--dark;
+
+  &__inner {
+    @include inner;
+  }
+
+  &__reviews-wrap {
+    @include desktop {
+      position: relative;
+
+      padding-top: 115px;
+
+      background: url("#{$path__img}/icon__quotes.svg") no-repeat top center / 79px 64px;
+    }
+  }
+
+  &__review-item {
+    @include desktop {
+      width: 780px;
+      margin: 0 auto;
+    }
+
+    display: none;
+
+    margin-bottom: 30px;
+
+    &--showed {
+      @include tablet {
+        display: flex;
+        flex-direction: column;
+      }
+
+      display: block;
+    }
+  }
+
+  &__review-author {
+    @include tablet {
+      order: 2;
+    }
+  }
+
+  &__author-name {
+    @include reformat__text-block;
+    @include tablet {
+      font-size: 20px;
+
+      margin-bottom: 0;
+    }
+    @include desktop {
+      margin-bottom: 1px;
+    }
+
+    font-size: $font-size__h2;
+    font-weight: $font-weight--bold;
+    line-height: $line-height--big;
+
+    margin-bottom: 10px;
+
+    color: $text-color--black;
+  }
+
+  &__author-desc {
+    @include reformat__text-block();
+    @include tablet {
+      display: block;
+    }
+    @include desktop {
+      font: $font--big;
+    }
+
+    font-size: inherit;
+
+    display: none;
+  }
+
+  &__review-text {
+    @include reformat__text-block;
+    @include tablet {
+      font-size: $font-size__h1--low;
+
+      margin-bottom: 35px;
+    }
+    @include desktop {
+      font: $font--big;
+
+      quotes: none;
+    }
+
+    line-height: $line-height--big;
+
+    quotes: "\00ab" "\00bb";
+    &::before {
+      content: open-quote;
+    }
+    &::after {
+      content: close-quote;
+    }
+  }
+
+  .slider-pagination {
+    @include desktop {
+      display: none;
+    }
+  }
+}

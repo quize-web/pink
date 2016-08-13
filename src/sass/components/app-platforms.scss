@@ -1,0 +1,131 @@
+.app-platforms {
+  @include tablet {
+    @include retina() {
+      background-image: url("#{$path__img}/md/bg__app-platforms--2x.png");
+    }
+
+    padding-top: 100px;
+    padding-bottom: 105px;
+
+    background: url("#{$path__img}/md/bg__app-platforms.png") no-repeat center bottom;
+    background-size: 700px 545px;
+  }
+  @include desktop {
+    @include retina() {
+      background-image: url("#{$path__img}/lg/bg__app-platforms--2x.png");
+    }
+
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    background: url("#{$path__img}/lg/bg__app-platforms.png") no-repeat right bottom;
+    background-size: 1050px 645px;
+  }
+  @include desktop--big {
+    background-position: center bottom;
+  }
+
+  text-align: center;
+
+  color: $text-color--light;
+
+  &__inner {
+    @include inner;
+    @include tablet {
+      @include inner--custom(300px, 40px, 360px);
+    }
+    @include desktop {
+      @include inner--custom(300px, 130px, 770px);
+    }
+  }
+
+  &__promo {
+    @include retina() {
+      background-image: url("#{$path__img}/xs/bg__app-platforms--2x.png");
+    }
+    @include retina(3) {
+      background-image: url("#{$path__img}/xs/bg__app-platforms--3x.png");
+    }
+    @include tablet {
+      min-height: 0;
+      margin-bottom: 25px;
+      padding: 0;
+
+      background: none;
+    }
+    @include desktop {
+      margin-bottom: 50px;
+    }
+
+    min-height: 350px;
+    padding: 20px 0;
+
+    background: url("#{$path__img}/xs/bg__app-platforms.png") no-repeat left bottom;
+    background-color: transparent;
+    background-size: 258px, 286px;
+  }
+
+  &__title {
+    @include tablet {
+      font: $font__h1--big;
+
+      padding: 0 40px;
+    }
+    @include desktop {
+      font: $font__h1--huge;
+
+      padding: 0;
+    }
+
+    font: $font__h1;
+
+    display: block;
+
+    margin: 0;
+
+    text-align: center;
+  }
+
+  &__download {
+    @include tablet {
+      padding: 0;
+
+      background: none;
+    }
+
+    padding: 30px 0;
+
+    background-color: $color__blue--darker;
+  }
+
+  &__images-wrap {
+    @include tablet {
+      margin-bottom: 40px;
+    }
+
+    font-size: 0;
+
+    display: inline-block;
+
+    margin-bottom: 25px;
+
+    vertical-align: top;
+  }
+
+  &__platform-image {
+    display: inline-block;
+
+    width: auto;
+    height: auto;
+    margin: 0 18px;
+
+    vertical-align: bottom;
+  }
+
+  &__desc {
+    @include reformat__text-block;
+    @include tablet {
+      font: $font__h1--low;
+    }
+  }
+}

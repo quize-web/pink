@@ -1,0 +1,300 @@
+.app-tariffs {
+  @include top-gradient(25px);
+  @include tablet {
+    @include top-gradient(53px);
+
+    overflow: visible;
+
+    padding-top: 35px + 53px;
+    padding-bottom: 70px;
+  }
+  @include desktop {
+    @include top-gradient(91px);
+
+    padding-top: 62px + 91px;
+    padding-bottom: 95px;
+  }
+
+  line-height: $line-height--big;
+
+  overflow: hidden;
+
+  padding-top: 65px + 25px;
+  padding-bottom: 45px;
+
+  color: $text-color--dark;
+  background-color: $color__gray;
+
+  &__inner {
+    @include inner;
+  }
+
+  &__table {
+    @include tablet {
+      position: static;
+
+      width: 100%;
+      margin-bottom: 0;
+    }
+
+    position: relative;
+    left: -$content-width--xs;
+
+    margin-bottom: 40px;
+
+    border-collapse: collapse;
+
+    td,
+    th {
+      @include tablet {
+        box-sizing: content-box;
+        min-width: 0;
+        max-width: none;
+      }
+
+      box-sizing: border-box;
+      min-width: $content-width--xs;
+      max-width: $content-width--xs;
+
+      border-radius: 3px;
+    }
+  }
+
+  &__table-header-row > * {
+    border-right: 2px solid $color__gray--darker;
+
+    &:last-child {
+      border-width: 0;
+    }
+  }
+
+  &__tariff-title {
+    @include tablet {
+      padding-top: 15px;
+      padding-bottom: 10px;
+      //padding: 15px 35px 10px;
+    }
+    @include desktop {
+      padding: 20px;
+    }
+
+    position: relative;
+
+    padding: 20px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: $text-color--light;
+    background-color: $color__blue;
+
+    &--hit::before {
+      @include tablet {
+        left: 0;
+
+        width: 61px;
+        height: 61px;
+
+        background-image: url("#{$path__img}/md/hit.png");
+        background-size: contain;
+      }
+      @include desktop {
+        width: 74px;
+        height: 73px;
+
+        background-image: url("#{$path__img}/lg/hit.png");
+      }
+
+      position: absolute;
+      top: 0;
+      left: -2px;
+
+      width: 74px;
+      height: 73px;
+
+      content: "";
+
+      background: url("#{$path__img}/xs/hit.png") no-repeat top left;
+    }
+
+    &--empty-cell {
+      @include tablet {
+        display: table-cell;
+      }
+
+      display: none;
+      visibility: hidden;
+
+      border-width: 0;
+    }
+  }
+
+  &__tariff-name {
+    @include reformat__text-block;
+    @include tablet {
+      font-size: $font-size__h2--low;
+    }
+    @include desktop {
+      font-size: $font-size__h2;
+
+      margin-bottom: 1px;
+    }
+
+    font-size: $font-size__h2;
+    font-weight: $font-weight__h2;
+
+    text-transform: uppercase;
+  }
+
+  &__tariff-price {
+    @include reformat__text-block;
+    @include tablet {
+      font-size: $font-size__h1--low;
+    }
+    @include desktop {
+      font-size: $font-size__h1;
+    }
+
+    font-size: $font-size__h1;
+    font-weight: $font-weight__h1;
+    font-style: normal;
+
+    text-transform: uppercase;
+  }
+
+  &__table-feature {
+    @include tablet {
+      display: table-cell;
+    }
+    @include desktop {
+      font-size: $font-size--big;
+
+      padding: 16px 25px 14px;
+    }
+
+    font-weight: $font-weight;
+
+    display: none;
+
+    padding: 10px 15px 5px;
+
+    text-align: left;
+
+    color: $text-color--dark;
+    border: 2px solid $color__gray--darker;
+    background-color: $color__white;
+  }
+
+  &__table-cell {
+    @include tablet {
+      padding: 0;
+    }
+
+    font-size: $font-size;
+
+    position: relative;
+
+    padding: 15px 20px;
+
+    text-transform: uppercase;
+
+    color: $text-color--dark;
+    border: 2px solid $color__gray--darker;
+    background-color: $color__white;
+
+    &--yes::after {
+      @include tablet {
+        //top: 5px;
+        //right: 65px;
+        //transform: rotate(45deg);
+        top: 50%;
+        right: 50%;
+
+        transform: translate(50%, -65%) rotate(45deg);
+      }
+      @include desktop {
+        transform: translate(50%, -60%) rotate(45deg);
+      }
+
+      position: absolute;
+      top: 14px;
+      right: 26px;
+
+      box-sizing: border-box;
+      width: 14px;
+      height: 28px;
+
+      content: "";
+      transform: rotate(45deg);
+
+      border: 2px solid $color__green;
+      border-top: none;
+      border-left: none;
+    }
+
+    &--nope::before,
+    &--nope::after {
+      @include tablet {
+        transform: translate(50%, -50%) rotate(45deg);
+      }
+
+      position: absolute;
+
+      content: "";
+      transform: rotate(45deg);
+    }
+
+    &--nope::before {
+      @include tablet {
+        top: 50%;
+        right: 50%;
+      }
+
+      top: 28px;
+      right: 15px;
+
+      width: 34px;
+      height: 2px;
+
+      background-color: $color__orange;
+    }
+
+    &--nope::after {
+      @include tablet {
+        top: 50%;
+        right: 50%;
+      }
+
+      top: 12px;
+      right: 31px;
+
+      width: 2px;
+      height: 34px;
+
+      background-color: $color__orange;
+    }
+  }
+
+  &__table-cell-feature::before {
+    @include reformat__text-block(inline-block);
+    @include tablet {
+      display: none;
+    }
+
+    content: attr(data-feature);
+  }
+
+  &__table-cell-include {
+    @include reformat__text-block(inline-block);
+
+    font-size: 0;
+
+    float: right;
+  }
+
+  .slider-pagination {
+    @include tablet {
+      display: none;
+    }
+  }
+}
