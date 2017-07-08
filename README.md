@@ -31,6 +31,8 @@ _(добавлена в .gitignore)_
 
 Данная папка содержит скомпилированные и минифицированные файлы.
 
+Ссылка на собранный билд (для ленивых:) - [build.rar](https://drive.google.com/open?id=0B91tVOvzumxKUTRwZHlOSDRZZzA)
+
 ## Папка `_temp`
 _(добавлена в .gitignore)_
 
